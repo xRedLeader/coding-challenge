@@ -1,4 +1,4 @@
-import { Home } from '@material-ui/icons';
+import { Home, VideogameAsset } from '@material-ui/icons';
 import { createStyles, makeStyles } from '@material-ui/styles';
 import { Theme, BottomNavigation, BottomNavigationAction } from '@material-ui/core';
 import React from 'react';
@@ -29,6 +29,12 @@ export const Footer: React.FC<FooterProps> = (props) => {
         <BottomNavigationAction
           label="Home"
           icon={<Home />}
+          component={Link}
+          to={clientRoutes.home()}
+        />
+        <BottomNavigationAction
+          label="Trivia"
+          icon={<VideogameAsset />}
           component={Link}
           to={clientRoutes.home()}
         />

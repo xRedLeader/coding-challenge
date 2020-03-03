@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const DotenvWebpack = require('dotenv-webpack');
 const dotenv = require('dotenv');
 
-const envFile = path.resolve(__dirname, '../.env');
+const envFile = path.resolve(__dirname, '../local.env');
 const dotEnvConfig = dotenv.config({ path: envFile });
 if (dotEnvConfig.error) throw dotEnvConfig.error;
 const appConfig = Object.keys(dotEnvConfig.parsed).length === 0 ? undefined : dotEnvConfig.parsed;
